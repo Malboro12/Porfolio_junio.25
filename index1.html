@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pizda.html">
+</head>
+<body>
+    <form action="https://formspree.io/f/alexeymalborovich@gmail.com" method="POST">
+        <fieldset>
+            <legend>Informacion personal</legend>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="telefono">Teléfono</label>
+                <input type="tel" pattern="[0-9]{9}" name="telefono" id="telefono">
+            </div>
+            <div>
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input type="date" name="nacimiento" id="nacimiento">
+            </div>
+            <div>
+                <label>Género</label>
+                <div>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="genero" value="masculino" id="masculino">
+                </div>
+                <div>
+                    <label for="femenino">Femenino</label>
+                    <input type="radio" name="genero" value="femenino" id="femenino">
+                </div>
+            </div>
+            <div>
+                <label for="color">Color favorito</label>
+                <input type="color" name="color" id="color">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensaje</legend>
+            <div>
+                <label for="tipo_mensaje">Tipo de mensaje</label>
+                <select name="tipo_mensaje" id="tipo_mensaje">
+                    <option value="profesional">Profesional</option>
+                    <option value="personal">Personal</option>
+                </select>
+            </div>
+            <div>
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="50" rows="4" required></textarea>
+            </div>
+        </fieldset>
+
+        <div class="buttons">
+            <button class="delete-button" type="reset">Borrar</button>
+            <button class="send-button" type="submit">Enviar</button>
+        </div>
+
+        <div class="logo">
+            <img src="https://www.noviasalcedo.es/wp-content/uploads/2023/06/logoblanco-claim-small-para-themeFLAT.fw_-4.png" width="200">
+        </div>
+    </form>
+</body>
+</html>
